@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Billetera Digital Universal - Transferir</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/estilo.css">
+</head>
+<body data-page="transacciones">
+
+  <header class="custom-header navbar navbar-expand-lg navbar-dark shadow">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand fw-bold text-black" href="#">Billetera Universal</a>
+      <button class="navbar-toggler bg-black" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav nav-links-container">
+          <li class="nav-item"><a class="nav-link" href="../main/menu.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="../depositos/deposits.html">Depositar</a></li>
+          <li class="nav-item"><a class="nav-link" href="sendmoney.html">Transferir</a></li>
+          <li class="nav-item"><a class="nav-link" href="../movimientos/transactions.html">Movimientos</a></li>
+        </ul>
+        <div class="ms-auto">
+          <a class="btn btn-exit px-4 fw-bold" href="../index.html">Cerrar sesión</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container mt-5">
+    
+    <div class="card p-4 shadow-sm mb-4" style="border: 2px solid #000; background-color: rgba(255,255,255,0.95);">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <h3 class="fw-bold mb-1" id="lblNombreTrans">Cargando usuario...</h3>
+          <p class="text-muted mb-0">N° Cuenta: <span id="lblCuentaTrans">-----</span></p>
+        </div>
+        <div class="col-md-6 text-md-end mt-3 mt-md-0">
+          <span class="fs-5 fw-bold text-dark">Saldo Disponible:</span>
+          <h2 class="text-danger fw-bold mb-0">$<span id="lblSaldoTrans">0</span></h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-end mb-3">
+      <button class="btn btn-dark fw-bold px-4" id="btnAbrirModal">
+        ➕ Agregar Contacto
+      </button>
+    </div>
+
+    <div class="row g-4">
+      
+      <div class="col-md-6">
+        <div class="card p-4 shadow-sm h-100" style="border: 2px solid #000; background-color: rgba(255,255,255,0.95);">
+          <h4 class="fw-bold mb-3">Detalles de la Transacción</h4>
+          <hr style="border-top: 2px solid #000;">
+          
+          <form id="transferForm" novalidate>
+            <div class="mb-3">
+              <label for="txtMontoTrans" class="form-label fw-bold">Monto ($)</label>
+              <input type="text" class="form-control border-dark" id="txtMontoTrans" placeholder="Ej: 20.000" required autocomplete="off">
+            </div>
+
+            <div class="mb-4">
+              <label for="txtMensajeTrans" class="form-label fw-bold">Mensaje / Descripción</label>
+              <textarea class="form-control border-dark" id="txtMensajeTrans" rows="3" placeholder="Escribe un mensaje para el destinatario..." required></textarea>
+            </div>
+
+            <div class="d-grid gap-2">
+              <button type="submit" class="btn btn-custom-dark btn-lg fw-bold">Enviar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card p-4 shadow-sm h-100" style="border: 2px solid #000; background-color: rgba(255,255,255,0.95);">
+          <h4 class="fw-bold mb-3">Selecciona el Destinatario</h4>
+          <hr style="border-top: 2px solid #000;">
+          
+          <div id="contactosContainer" class="list-group overflow-auto" style="max-height: 350px;">
+            <p class="text-muted text-center py-3">Cargando destinatarios autorizados...</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <div class="modal fade" id="modalContacto" tableindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content border-dark" style="border: 2px solid #000;">
+        <div class="modal-header bg-dark text-white">
+          <h5 class="modal-title fw-bold">Nuevo Contacto</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="formNuevoContacto">
+            <div class="mb-2">
+              <label class="form-label fw-bold">Nombre Completo</label>
+              <input type="text" id="addNombre" class="form-control border-dark" required>
+            </div>
+            <div class="mb-2">
+              <label class="form-label fw-bold">Correo Electrónico</label>
+              <input type="email" id="addCorreo" class="form-control border-dark" required>
+            </div>
+            <div class="mb-2">
+              <label class="form-label fw-bold">Banco</label>
+              <input type="text" id="addBanco" class="form-control border-dark" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label fw-bold">Número de Cuenta</label>
+              <input type="text" id="addCuenta" class="form-control border-dark" required>
+            </div>
+            <button type="submit" class="btn btn-custom-dark w-100 fw-bold">Guardar Contacto</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="../js/app.js"></script>
+</body>
+</html>
