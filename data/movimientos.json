@@ -1,0 +1,33 @@
+[
+  {
+    "usuario": {
+      "nombre": "Juan Pérez",
+      "cuenta": "70890"
+    },
+    "movimientos": [
+      {
+        "Fecha": "20-06-2026",
+        "Tipo": "Deposito",
+        "Detalle": "Depósito",
+        "Mensaje": "Depósito por caja sucursal",
+        "Monto": 500000
+      }     
+    ]
+  },
+  {
+    "usuario": {
+      "nombre": "Claudio Gutiérrez",
+      "cuenta": "54201"
+    },
+    "movimientos": [
+      {
+        "Fecha": "21-06-2026",
+        "Tipo": "Deposito",
+        "Detalle": "Depósito",
+        "Mensaje": "Despósito en cuenta",
+        "Monto": 500000
+      }
+     
+    ]
+  }
+]

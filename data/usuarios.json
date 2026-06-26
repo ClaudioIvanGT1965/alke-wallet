@@ -1,0 +1,18 @@
+[
+  {
+    "nombre": "Juan Pérez",
+    "correo": "juan.perez@demo.cl",
+    "cuenta": "70890",
+    "contraseña": "juan",
+    "montoini": 0,
+    "saldo": 500000
+  },
+  {
+    "nombre": "Claudio Gutiérrez",
+    "correo": "claudioivangt@gmail.com",
+    "cuenta": "54201",
+    "contraseña": "claudio",
+    "montoini": 0,
+    "saldo": 500000
+  }
+]

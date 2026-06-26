@@ -1,0 +1,120 @@
+/* Fondo responsivo con una trama de degradado sutil entre tonos rojos oscuros y vivos */
+/* ==========================================================================
+   Estilos Globales para el Body
+   ========================================================================== */
+body {
+  background: linear-gradient(135deg, #8b0000 0%, #d32f2f 50%, #ff5252 100%);
+  color: #000000; /* Letras negras por defecto */
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* ==========================================================================
+   Estilos EXCLUSIVOS para la Pantalla de Entrada (index.html)
+   ========================================================================== */
+body[data-page="index"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+/* Contenedor de la tarjeta de bienvenida con bordes suavizados */
+.landing-card {
+  background-color: rgba(255, 255, 255, 0.15); /* Fondo blanco ultra-translúcido para dar contraste */
+  backdrop-filter: blur(8px); /* Efecto de desenfoque moderno */
+  border: 2px solid #000000; /* Borde negro para delimitar y dar estructura */
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* Visor con letras grandes y estilizadas */
+.landing-brand {
+  font-size: calc(1.8rem + 1.5vw); /* Tamaño responsivo fluido */
+  color: #000000;
+  letter-spacing: -1px;
+}
+
+/* Descripción */
+.landing-tagline {
+  color: #1a1a1a;
+  font-weight: 500;
+}
+
+/* Botón personalizado de alto contraste (Negro con texto blanco) */
+.btn-custom-dark {
+  background-color: #000000;
+  color: #ffffff;
+  border: 2px solid #000000;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-custom-dark:hover {
+  background-color: transparent;
+  color: #000000; /* Al pasar el mouse, se vuelve transparente con letras negras */
+}
+
+/* Nota de Copyright */
+.landing-note {
+  color: #000000;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+.header {
+	position: fixed;
+	width: 100%;
+	margin-top: -100px;
+}
+
+/*   Estilos para el Header de menu.html */
+
+
+/* Fondo del header con el mismo degradado temático */
+.custom-header {
+  background: linear-gradient(135deg, #8b0000 0%, #d32f2f 100%);
+  border-bottom: 2px solid #000000;
+}
+
+/* Estilo base para los enlaces del menú (Letras negras por defecto) */
+.custom-header .navbar-nav .nav-link {
+  color: #000000 !important;
+  font-weight: 600;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+/* Efecto Hover al pasar el mouse por los enlaces */
+.custom-header .navbar-nav .nav-link:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #000000 !important;
+}
+
+/* Clase dinámica que aplicará jQuery para destacar la página activa */
+.custom-header .navbar-nav .nav-link.active-page {
+  background-color: #000000 !important;
+  color: #ffffff !important; /* Resalta en fondo negro con letras blancas */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Botón Cerrar Sesión (Estilo Negro Sólido) */
+.btn-exit {
+  background-color: #000000;
+  color: #ffffff !important;
+  border: 2px solid #000000;
+  transition: all 0.3s ease;
+}
+
+.btn-exit:hover {
+  background-color: transparent;
+  color: #000000 !important;
+}
+
+/* Bordes de error para las validaciones en tiempo real */
+.input-error {
+  border: 2px solid #ff0000 !important;
+  background-color: #ffe6e6 !important;
+}

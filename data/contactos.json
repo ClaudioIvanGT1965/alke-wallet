@@ -1,0 +1,41 @@
+[
+  {
+    "nombre": "Pedro Gonzalez",
+    "correo": "pedrog@demo.cl",
+	"cuenta" : "203-55",
+	"banco" : "Estado",
+	"cuentauser" : "70890"
+   },
+  {
+    "nombre": "Rosalinda Gómez",
+    "correo": "rosalinda@demo.cl",
+	"cuenta" : "205-66",
+	"banco" : "City",
+	"cuentauser" : "70890"
+   
+  },
+  {
+    "nombre": "Pilar Campos",
+    "correo": "pili@gmail.com",
+	"cuenta" : "487-69",
+	"banco" : "Itau",
+	"cuentauser" : "54201"
+   
+  },
+  {
+    "nombre": "Mario Silva",
+    "correo": "mario@demo.cl",
+	"cuenta" : "4201-7754201",
+	"banco" : "Santander",
+	"cuentauser" : "54201"
+   
+  },
+  {
+    "nombre": "Adriana Ortega",
+    "correo": "ortega@demo.cl",
+	"banco" : "Estado",
+	"cuenta" : "487754201",
+	"cuentauser" : "54201"
+   
+  }
+]
